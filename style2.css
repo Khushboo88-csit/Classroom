@@ -1,0 +1,151 @@
+#n1{
+    background-color:black;
+    border-style:solid;
+    border-width:6px;
+    border-color:white;
+    width:1300px;
+    height:50px;
+    display: inline;
+    margin-bottom:20px;
+    padding-bottom:25px;
+    position:fixed; 
+    z-index:1;
+
+}
+/* To write the content in one line use -> display: inline  */
+#d1{
+    color:orange;
+    /* background-color:black;
+    border:10px;
+    border-color:white; */
+    text-decoration:none;
+    text-align:left;
+    display:inline;
+
+}
+#d2{
+    color:white;
+     background-color:black;
+    border:10px;
+    border-color:white; 
+    display: inline;
+
+}
+#b1{
+    background-color:orange;
+    color:white;
+    display:inline;
+}
+.content{
+    /* height:500px; */
+    display:flex;
+    gap:10px;
+}
+#l1{
+    height:300px;
+    width:300px; 
+    border: 2px solid black;
+    background-image:url(roman-holoschchuk-DPOPc2vhUww-unsplash.jpg);
+    background-size:cover;
+    text-align:center;
+     /* display:flex;  */
+}
+ #l2{
+    height:300px;
+    width:300px;
+    border: 2px solid black;
+    background-image:url(paolo-giubilato-ZwKCWVFdrcs-unsplash.jpg); background-size:cover;
+    text-align:center;
+    /* display:flex; */
+}
+#l3{
+    height:300px;
+    width:300px;
+    border: 2px solid black;
+    background-image:url(ox-street-BWPqHZBhMVA-unsplash.jpg);
+     background-size:cover;
+    text-align:center;
+    /* display:flex; */
+} 
+#l4{
+    height:300px;
+    width:300px;
+    border: 2px solid black;
+    background-image:url(mohamad-azaam-UkDbj7BOPrY-unsplash.jpg);
+     background-size:cover;
+    text-align:center;
+    /* display:flex; */
+} 
+#l5{
+    height:300px;
+    width:300px;
+    border: 2px solid black;
+    background-image:url(kari-shea-1SAnrIxw5OY-unsplash.jpg);
+     background-size:cover;
+    text-align:center;
+    /* display:flex; */
+} 
+#l6{
+    height:300px;
+    width:300px;
+    border: 2px solid black;
+    background-image:url(john-torcasio-TJrkkhdB39E-unsplash.jpg);
+     background-size:cover;
+    text-align:center;
+    /* display:flex; */
+} 
+#l7{
+    height:300px;
+    width:300px;
+    border: 2px solid black;
+    background-image:url(conor-luddy-IVaKksEZmZA-unsplash.jpg);
+     background-size:cover;
+    text-align:center;
+    /* display:flex; */
+} 
+#l8{
+    height:300px;
+    width:300px;
+    border: 2px solid black;
+    background-image:url(jei-lee-yRXuXvy4sQ4-unsplash.jpg);
+     background-size:cover;
+    text-align:center;
+    /* display:flex; */
+} 
+
+footer{
+    position:relative;
+    top:1000px;
+    height:150px;
+    width:1500px;
+    font-size:large;
+    color:white;
+    background-color:black;
+    text-align:center;
+}
+
+/* body{
+    background-color:azure;
+} */
+ img{
+    height:100px;
+    border:2px solid black;
+    text-align:center;
+    position:fixed;
+    right:1px;
+    top:1px;
+ }
+ #z2{
+    font-size:large;
+    color:white;
+    /* background-color:white; */
+    height:300px;
+    width:1000px;
+    position:relative;
+    top:100px;
+ }
+ body{
+    /* background-image:url(abid-shah-cxAV7aUesIQ-unsplash.jpg);
+    background-size:cover; */
+    background-color: rgba(0, 0, 0, 0.749);
+ }

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HealthCare+ Symptom Checker</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f8fb;
+    color:#222;
+}
+
+header{
+    background:linear-gradient(135deg,#0f9d8a,#0c7a6e);
+    color:white;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+}
+
+/* nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:16px;
+} */
+
+.hero{
+    padding:70px 20px;
+    text-align:center;
+    background:white;
+}
+
+.hero h1{
+    font-size:48px;
+    color:#0f9d8a;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:850px;
+    margin:auto;
+    line-height:1.8;
+    font-size:18px;
+    color:#555;
+}
+
+.main-container{
+    width:90%;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card h2{
+    margin-bottom:20px;
+    color:#0f9d8a;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+input, select{
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    font-size:15px;
+}
+
+button{
+    margin-top:20px;
+    width:100%;
+    padding:14px;
+    background:#0f9d8a;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:17px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#08685c;
+}
+
+.result-box{
+    margin-top:20px;
+    padding:20px;
+    background:#eef9f7;
+    border-left:5px solid #0f9d8a;
+    border-radius:10px;
+    line-height:1.8;
+}
+
+.section-title{
+    text-align:center;
+    font-size:38px;
+    color:#0f9d8a;
+    margin-top:60px;
+}
+
+.test-container{
+    width:90%;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.test-card{
+    background:white;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.test-card:hover{
+    transform:translateY(-5px);
+}
+
+.test-card h3{
+    color:#0f9d8a;
+    margin-bottom:12px;
+}
+
+.test-card p{
+    line-height:1.6;
+    margin-bottom:10px;
+}
+
+.price{
+    font-size:24px;
+    font-weight:bold;
+    color:#111;
+}
+
+.old-price{
+    text-decoration:line-through;
+    color:gray;
+    font-size:17px;
+    margin-left:8px;
+}
+
+.discount{
+    color:green;
+    font-weight:bold;
+    margin-left:8px;
+}
+
+.book-btn{
+    width:100%;
+    margin-top:15px;
+}
+
+.info-section{
+    width:90%;
+    margin:60px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.info-box{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.info-box h3{
+    color:#0f9d8a;
+    margin-bottom:12px;
+}
+
+footer{
+    margin-top:60px;
+    background:#0f9d8a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:900px){
+    .main-container{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">QuickClinic</div>
+
+    <!-- <nav>
+        <a href="#">Home</a>
+        <a href="#">Symptoms</a>
+        <a href="#">Health Tests</a>
+        <a href="#">Doctors</a>
+        <a href="#">Contact</a>
+    </nav> -->
+</header>
+
+<section class="hero">
+    <h1>HealthCare Suggestions</h1>
+
+    <p>
+        Enter your symptoms and get possible disease information, recommended health tests,
+        and medical suggestions instantly. Book lab tests online with home sample collection,
+        fast reports, and affordable pricing.
+    </p>
+</section>
+
+<div class="main-container">
+
+    <div class="card">
+        <h2>Check Your Symptoms</h2>
+
+        <label>Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label>Select Symptom</label>
+        <select id="symptom">
+            <option value="">Choose symptom</option>
+            <option value="fever">Fever</option>
+            <option value="cough">Cough</option>
+            <option value="chest">Chest Pain</option>
+            <option value="fatigue">Fatigue</option>
+            <option value="sugar">Frequent Thirst</option>
+            <option value="joint">Joint Pain</option>
+            <option value="skin">Skin Rash</option>
+        </select>
+
+        <button onclick="analyzeSymptoms()">Analyze Symptoms</button>
+
+        <div class="result-box" id="result">
+            Your possible disease information and suggested tests will appear here.
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Health Suggestions</h2>
+
+        <div class="info-box">
+            <h3>Healthy Lifestyle Tips</h3>
+            <p>
+                Drink enough water, maintain a healthy diet, exercise regularly,
+                sleep at least 7-8 hours daily, and avoid excessive junk food.
+            </p>
+        </div>
+
+        <br>
+
+        <div class="info-box">
+            <h3>Emergency Advice</h3>
+            <p>
+                If you experience severe chest pain, breathing difficulty,
+                high fever, or dizziness, consult a doctor immediately.
+            </p>
+        </div>
+
+        <br>
+
+        <div class="info-box">
+            <h3>Online Consultation</h3>
+            <p>
+                Connect with top doctors online in less than 10 minutes.
+                Get prescriptions, health guidance, and lab test recommendations.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<h2 class="section-title">Recommended Health Tests</h2>
+
+<section class="test-container">
+
+    <div class="test-card">
+        <h3>CBC Test</h3>
+        <p>Complete Blood Count test to detect infection, anemia, and blood disorders.</p>
+        <p>Reports in 10 Hrs</p>
+
+        <p class="price">
+            ₹299
+            <span class="old-price">₹799</span>
+            <span class="discount">63% OFF</span>
+        </p>
+
+        <button class="book-btn" onclick="bookTest('CBC Test')">Book Test</button>
+    </div>
+
+    <div class="test-card">
+        <h3>Thyroid Profile Test</h3>
+        <p>Checks thyroid hormone levels and detects thyroid-related disorders.</p>
+        <p>Reports in 10 Hrs</p>
+
+        <p class="price">
+            ₹349
+            <span class="old-price">₹699</span>
+            <span class="discount">50% OFF</span>
+        </p>
+
+        <button class="book-btn" onclick="bookTest('Thyroid Profile Test')">Book Test</button>
+    </div>
+
+    <div class="test-card">
+        <h3>Liver Function Test (LFT)</h3>
+        <p>Measures liver health and identifies liver disease or infection.</p>
+        <p>Reports in 11 Hrs</p>
+
+        <p class="price">
+            ₹449
+            <span class="old-price">₹1099</span>
+            <span class="discount">59% OFF</span>
+        </p>
+
+        <button class="book-btn" onclick="bookTest('Liver Function Test')">Book Test</button>
+    </div>
+
+    <div class="test-card">
+        <h3>Blood Sugar Test</h3>
+        <p>Checks blood glucose level and helps diagnose diabetes.</p>
+        <p>Reports in 8 Hrs</p>
+
+        <p class="price">
+            ₹199
+            <span class="old-price">₹499</span>
+            <span class="discount">60% OFF</span>
+        </p>
+
+        <button class="book-btn" onclick="bookTest('Blood Sugar Test')">Book Test</button>
+    </div>
+
+</section>
+
+<h2 class="section-title">Common Disease Information</h2>
+
+<section class="info-section">
+
+    <div class="info-box">
+        <h3>Diabetes</h3>
+        <p>
+            Symptoms include frequent thirst, frequent urination,
+            fatigue, and blurred vision.
+        </p>
+    </div>
+
+    <div class="info-box">
+        <h3>Flu & Viral Fever</h3>
+        <p>
+            Symptoms include fever, cough, body pain,
+            weakness, and headache.
+        </p>
+    </div>
+
+    <div class="info-box">
+        <h3>Heart Disease</h3>
+        <p>
+            Symptoms include chest pain, shortness of breath,
+            fatigue, and dizziness.
+        </p>
+    </div>
+
+    <div class="info-box">
+        <h3>Skin Allergy</h3>
+        <p>
+            Symptoms include itching, redness, rashes,
+            irritation, and dry skin.
+        </p>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 HealthCare | QuickClinic</p>
+</footer>
+
+<script>
+
+function analyzeSymptoms(){
+
+    let symptom = document.getElementById('symptom').value;
+    let result = document.getElementById('result');
+
+    if(symptom === ''){
+        result.innerHTML = 'Please select a symptom.';
+        return;
+    }
+
+    if(symptom === 'fever'){
+        result.innerHTML = `
+        <strong>Possible Disease:</strong> Viral Fever or Flu <br><br>
+        <strong>Suggested Tests:</strong> CBC Test, Dengue Test <br><br>
+        <strong>Advice:</strong> Drink water, take rest, and consult a doctor if fever continues.
+        `;
+    }
+
+    else if(symptom === 'cough'){
+        result.innerHTML = `
+        <strong>Possible Disease:</strong> Cold, Flu, or Respiratory Infection <br><br>
+        <strong>Suggested Tests:</strong> Chest X-Ray, CBC Test <br><br>
+        <strong>Advice:</strong> Avoid cold food and consult a doctor if breathing issues occur.
+        `;
+    }
+
+    else if(symptom === 'chest'){
+        result.innerHTML = `
+        <strong>Possible Disease:</strong> Heart Disease or High Blood Pressure <br><br>
+        <strong>Suggested Tests:</strong> ECG, Lipid Profile, Blood Pressure Test <br><br>
+        <strong>Advice:</strong> Seek immediate medical attention if pain is severe.
+        `;
+    }
+
+    else if(symptom === 'fatigue'){
+        result.innerHTML = `
+        <strong>Possible Disease:</strong> Thyroid Disorder or Vitamin Deficiency <br><br>
+        <strong>Suggested Tests:</strong> Thyroid Profile Test, Vitamin B12 Test <br><br>
+        <strong>Advice:</strong> Eat nutritious food and maintain proper sleep.
+        `;
+    }
+
+    else if(symptom === 'sugar'){
+        result.innerHTML = `
+        <strong>Possible Disease:</strong> Diabetes <br><br>
+        <strong>Suggested Tests:</strong> Blood Sugar Test, HbA1c Test <br><br>
+        <strong>Advice:</strong> Reduce sugar intake and exercise regularly.
+        `;
+    }
+
+    else if(symptom === 'joint'){
+        result.innerHTML = `
+        <strong>Possible Disease:</strong> Arthritis or Bone Disorder <br><br>
+        <strong>Suggested Tests:</strong> Vitamin D Test, Calcium Test <br><br>
+        <strong>Advice:</strong> Maintain healthy posture and avoid heavy strain.
+        `;
+    }
+
+    else if(symptom === 'skin'){
+        result.innerHTML = `
+        <strong>Possible Disease:</strong> Skin Allergy or Infection <br><br>
+        <strong>Suggested Tests:</strong> Allergy Test, Skin Examination <br><br>
+        <strong>Advice:</strong> Avoid harsh chemicals and maintain skin hygiene.
+        `;
+    }
+}
+
+function bookTest(testName){
+    alert('Your booking for ' + testName + ' has been confirmed!');
+}
+
+</script>
+
+</body>
+</html>

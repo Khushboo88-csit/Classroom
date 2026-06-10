@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doctor Consultation Website</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#222;
+}
+
+/* HEADER */
+
+header{
+    background:white;
+    padding:15px 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.back-icon{
+    font-size:25px;
+    cursor:pointer;
+}
+
+.main-logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#0f9d8a;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(135deg,#0f9d8a,#14b8a6);
+    color:white;
+    padding:50px 20px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+/* MAIN BANNER */
+
+.main-banner{
+    width:90%;
+    margin:30px auto;
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.banner-text h2{
+    font-size:36px;
+    color:#0f9d8a;
+}
+
+.banner-text p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+.banner-img{
+    width:250px;
+}
+
+.banner-img img{
+    width:100%;
+}
+
+/* DOCTOR SECTION */
+
+.section-title{
+    font-size:32px;
+    text-align:center;
+    margin:40px 0 20px;
+    color:#0f9d8a;
+}
+
+.doctor-container{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.doctor-card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.doctor-card:hover{
+    transform:translateY(-5px);
+}
+
+.doctor-image{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    margin:auto;
+    overflow:hidden;
+}
+
+.doctor-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.doctor-card h3{
+    margin-top:15px;
+    text-align:center;
+}
+
+.exp{
+    text-align:center;
+    color:gray;
+    margin:10px 0;
+}
+
+.expertise{
+    font-size:15px;
+    line-height:1.6;
+    margin-bottom:15px;
+}
+
+.price{
+    font-size:24px;
+    font-weight:bold;
+    color:#111;
+}
+
+.old-price{
+    text-decoration:line-through;
+    color:gray;
+    font-size:18px;
+}
+
+.cashback{
+    margin:10px 0;
+    color:#0f9d8a;
+    font-weight:bold;
+}
+
+.plus{
+    background:#0f9d8a;
+    color:white;
+    padding:4px 10px;
+    border-radius:20px;
+    font-size:13px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    background:#0f9d8a;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#087a6b;
+}
+
+/* TOP CONCERNS */
+
+.grid-section{
+    width:90%;
+    margin:40px auto;
+}
+
+.grid-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:20px;
+}
+
+.grid-item{
+    background:white;
+    padding:30px 15px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.grid-item:hover{
+    transform:scale(1.05);
+}
+
+.view-all{
+    display:block;
+    width:180px;
+    margin:30px auto;
+    text-align:center;
+    background:#0f9d8a;
+    color:white;
+    padding:12px;
+    border-radius:10px;
+    text-decoration:none;
+}
+
+/* SYMPTOMS */
+
+.carousel{
+    display:flex;
+    overflow:auto;
+    gap:20px;
+    padding:20px;
+}
+
+.carousel-item{
+    min-width:220px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* BANNERS */
+
+.banner-box{
+    width:90%;
+    margin:40px auto;
+    background:linear-gradient(135deg,#14b8a6,#0f766e);
+    color:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0f9d8a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <div class="back-icon">⬅</div>
+        <div class="main-logo">QuickClinic</div>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Doctor Consult in 10 mins</h1>
+    <p>Connect with our top general physicians</p>
+</section>
+
+<section class="main-banner">
+    <div class="banner-text">
+        <h2>Online Doctor Consultation</h2>
+        <p>Fast • Trusted • Affordable Healthcare</p>
+    </div>
+
+    <div class="banner-img">
+        <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png">
+    </div>
+</section>
+
+<h2 class="section-title">Top Doctors</h2>
+
+<section class="doctor-container">
+
+    <!-- Doctor 1 -->
+    <div class="doctor-card">
+        <div class="doctor-image">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg">
+        </div>
+
+        <h3>Dr. Vasantha Kumar Kote</h3>
+        <p class="exp">41 years of experience</p>
+
+        <p class="expertise">
+            Expertise in: General Health, Sexual Health, Skin and Hair Health
+        </p>
+
+        <p class="price">₹349 <span class="old-price">₹499</span></p>
+
+        <p class="cashback">
+            Get 20% cashback with <span class="plus">PLUS</span>
+        </p>
+
+        <button onclick="consultDoctor('Dr. Vasantha Kumar Kote')">
+            Consult Now ⚡
+        </button>
+    </div>
+
+    <!-- Doctor 2 -->
+    <div class="doctor-card">
+        <div class="doctor-image">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg">
+        </div>
+
+        <h3>Dr. Pooja Dayma</h3>
+        <p class="exp">6 years of experience</p>
+
+        <p class="expertise">
+            Expertise in: General Health, Kidney Care, Bone and Joint Health
+        </p>
+
+        <p class="price">₹349 <span class="old-price">₹499</span></p>
+
+        <p class="cashback">
+            Get 20% cashback with <span class="plus">PLUS</span>
+        </p>
+
+        <button onclick="consultDoctor('Dr. Pooja Dayma')">
+            Consult Now ⚡
+        </button>
+    </div>
+
+    <!-- Doctor 3 -->
+    <div class="doctor-card">
+        <div class="doctor-image">
+            <img src="https://randomuser.me/api/portraits/men/52.jpg">
+        </div>
+
+        <h3>Dr. Shafiullah Baig</h3>
+        <p class="exp">7 years of experience</p>
+
+        <p class="expertise">
+            Expertise in: General Health, Bone and Joint Health, Elder Care, Blood Sugar Health
+        </p>
+
+        <p class="price">₹349 <span class="old-price">₹499</span></p>
+
+        <p class="cashback">
+            Get 20% cashback with <span class="plus">PLUS</span>
+        </p>
+
+        <button onclick="consultDoctor('Dr. Shafiullah Baig')">
+            Consult Now ⚡
+        </button>
+    </div>
+
+</section>
+
+<!-- TOP CONCERNS -->
+
+<section class="grid-section">
+
+    <h2 class="section-title">Top Concerns</h2>
+
+    <div class="grid-container">
+        <div class="grid-item">Fever</div>
+        <div class="grid-item">Diabetes</div>
+        <div class="grid-item">Skin Care</div>
+        <div class="grid-item">Hair Fall</div>
+        <div class="grid-item">Kidney Care</div>
+        <div class="grid-item">Joint Pain</div>
+    </div>
+
+    <a href="#" class="view-all">View All</a>
+
+</section>
+
+<!-- SYMPTOMS -->
+
+<h2 class="section-title">Find a Doctor by Symptoms</h2>
+
+<div class="carousel">
+
+    <div class="carousel-item">🤒 Cold & Fever</div>
+    <div class="carousel-item">🦴 Joint Pain</div>
+    <div class="carousel-item">🩺 Blood Pressure</div>
+    <div class="carousel-item">💊 Diabetes Care</div>
+    <div class="carousel-item">🧠 Mental Wellness</div>
+    <div class="carousel-item">💇 Hair Problems</div>
+
+</div>
+
+<!-- BANNERS -->
+
+<div class="banner-box">
+    24/7 Online Healthcare Support.<br>
+    Trusted Doctors Across India.<br>
+    Book Consultations Instantly.
+</div>
+
+
+<footer>
+    <p>© 2026 Healthcare | QuickClinic</p>
+</footer>
+
+<script>
+
+function consultDoctor(name){
+    alert("Appointment booked successfully with " + name);
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,607 @@
+h1{
+    color:green;
+}
+/* color property --> it color foreground */
+p{
+    color:rgb(246, 8, 48);
+}
+/* button{
+    color:rgba(127, 9, 237, 0.906);
+    background-color:aquamarine;
+} */
+/* Background color */
+body{
+    background-color:rgb(227, 170, 227);
+}
+/* Color System : RGB-->R+B=P , R+G=Y , B+G=L.B , R+B+G = White
+Color quantity = 0-255 */
+body{
+    background-color:rgb(0,255,255);
+}
+/* Color System --> Hex(Hexadecimal) range->00-ff(255) */
+body{
+    background-color:#00ffff;
+}
+/* no need to learn this. u can use google picker */
+/* Various types of Selector
+*{}--> Universal Selector which is applicable on whole page
+Element selector--> h1{} more priority if u change it later
+ Id selector--> Unique Id -done in HTML*/
+#Head1{
+    color: Blue;
+}
+/* Class Selector-->multiple element want to give same id then write in same class */
+.Learn{
+    color:green;
+}
+.H{
+    color:red;
+}
+button{
+    background-color:green;
+}
+/* Text align is used to align the text at right and center and left side..Is always align according to parent tag */
+p{
+    text-align : center;
+}
+/* Text Decoration to underline,overline,line-through, */
+p{
+    text-decoration: blue underline;
+}
+h2{
+    text-decoration: overline;
+    
+    
+    
+}
+h3{
+    text-decoration: line-through;
+}
+a{
+    text-decoration: none;
+}
+/* mdn is website is used to study CSS */
+h3{
+     text-decoration : double underline;
+}
+h4{
+    text-decoration :dashed underline;
+}
+h5{
+    text-decoration : wavy underline ;
+}
+h6{
+    text-decoration :  dotted underline;
+}
+/* Font-Weight : Normal,Bold, */
+#p1{
+    font-weight : normal;
+}
+#p2{
+    font-weight : bold;
+}
+#p3{
+    font-weight : lighter;
+}
+#p4{
+    font-weight : 500;
+}
+/* lightest -100 and darkest - 900 & */
+/* font-family -- font writting style */
+#j1{
+    text-align :left;
+    font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#j2{
+    text-align :left;
+    font-family :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* Units likes -> pixel(Absolute)  1 inch = 2.54cm = 96px , font-size: 2px* & normal font size is 16px */
+#j3{
+    font-size: 25px;
+}
+#j4{
+    font-size: 15px;
+    text-transform:lowercase;
+}
+/* line height --> space btw lines in paragraph */
+#j5{
+    line-height:50px; 
+}
+/* text-transform -> UPPER CASE or lower case & Capitalized - first letter of each word is capital */
+#j5{
+    text-transform:uppercase; 
+    
+}
+#one{
+    color:black;
+    text-align:center;
+    text-transform:capitalize;
+    font-family:'Times New Roman';
+}
+#outer{
+    font-size:25px;
+}
+#inner{ /*id*/
+    font-size:10px;
+}
+/* Box Model -> height, width , border,padding(space btw content and border), margin(space btw two boxes)  */
+
+#k1{
+    background-color:rgb(120, 120, 197);
+    text-transform:capitalize;
+    width:200px;
+    height:100px; /* it increases the background height of text [Whgen u inspect that then u got to know this]*/
+    border-width: 2px;
+    border-style: dashed;
+    border-color: red;
+    text-align:center;
+    padding-left:15px; /* Padding*/
+    padding-right:20px;
+    padding-top:10px;
+    padding-bottom:12px;
+    margin-top:50px;
+    margin-bottom:20px;
+    margin-left:10px;
+    margin-right:10px; /*margin has same shortcut trick as padding*/
+}
+/* U can write three properties of border at the same time like this border: width style color
+ U can write three properties of padding at the same time like this padding: top right bottom left
+ */
+#outer{
+    border:2px solid green;
+    background-color:bisque;
+    border-radius :10px; /*Make border vertices round*/
+    padding:10px 15px 20px 15px;
+}
+/* To make circle -> set same value for width & height and then set border radius:50% */
+#k2{
+    
+    width:100px;
+    height:100px;
+    border:2px dotted voilet;
+    border-radius: 50%;
+    background-color:pink;
+    text-align: center;
+}
+#k3{
+    height:100px;
+    width:100px;
+    background-color:green;
+    border-radius:50%;
+    text-align:center;
+}
+/* Amazon navbar */
+#n1{
+    background-color:black;
+    border-style:solid;
+    border-width:6px;
+    border-color:white;
+    width:200px;
+    height:200px;
+    display: inline;
+    margin-bottom:20px;
+    padding-bottom:25px;
+}
+/* To write the content in one line use -> display: inline  */
+#d1{
+    color:orange;
+    /* background-color:black;
+    border:10px;
+    border-color:white; */
+    text-decoration:none;
+    text-align:left;
+    display: inline;
+
+}
+#d2{
+    color:white;
+    /* background-color:black;
+    border:10px;
+    border-color:white; */
+    display: inline;
+
+}
+#b1{
+    background-color:orange;
+    color:white;
+    display: inline;
+    color:black; 
+    /* border:10px; */
+    /* border-color:white; */
+}
+/* If u want to hide anything from ur page so u can write display:none or visiblity: hidden (In case when the text write in html but don't want to show in web page) */
+#k3{
+    display:none; /* space is removed */ 
+    visibility: hidden; /* space is left in place of that thing */
+}
+/* Alpha channel -> opacity(intensity of color) decided by this.
+A range:0-1 , 0 ,0.25, 0.75 ,1
+RGBA use instead of rgb */
+
+#k4{
+    color:rgba(255,0,0,2);
+}
+/* Another type of Unit is Relative like %(size as relative to an element's parent), em , rem */
+#k4{
+    height:100px;
+    width:100px;
+    background-color:orange;
+    font-size:20px;
+}
+#k5{
+    /* height:50px; */
+    width:30%;
+    background-color:yellow;
+    font-size:2em;
+    width:2em;
+    width:5rem; 
+    height:20vh;
+
+}
+/* em unit is used in font size as respect to parent div and In width it change respect to itself
+like if parent font size is 10px and we set font size of child div 2em it means that it twice it 40px 
+rem(root em) is also a unit which is apply on root element (outer element)
+vh-> view port(brower) height 1%  and vw-> viewport width*/
+
+
+#y{
+    font-size:30px;
+}
+.con{
+    display:flex;
+    gap:5px;
+    
+ }
+ /* Position (top,right,bottom,left,z-index) : static, relative,absolute,fixed,sticky
+static:default position*/
+#m1{
+    height:100px;
+    width: 100px;
+    font-style:italic;
+    border:2px double black;
+    background-color:#7fffd4; 
+    /*position:static;   no top,right,bottom,left,z-index is apply bcoz it is static*/
+     position:sticky; /* it fixed according to user's scroll*/
+     top:30px;
+     bottom:50px;
+    
+    /* z index ->range -ve to +ve*/
+}
+#m2{
+     height:100px;
+    width: 100px;
+    font-style:italic;
+    border:2px double black;
+    background-color:beige;
+     position:relative; /*allow all changes & it changes relative to itself only*/
+     top:20px;
+     right:150px;
+     bottom:4px;
+     right:7px;
+     z-index:-1; /* -ve means it place under*/
+} 
+/*parent tag known as ancestor*/
+#m3{
+    height:100px;
+    width: 100px;
+    font-style:italic;
+    border:2px double black;
+    background-color:blanchedalmond;
+     position:absolute; /*allow changes relative to its closest parent tag and the next feature is place behind that box*/
+      top:100px; 
+     right:50px; 
+}
+#m4{
+    height:100px;
+    width: 100px;
+    font-style:italic;
+    border:2px double black;
+    background-color:magenta; 
+     position:fixed; /* brower page move but that box posiion is fixed . Top and all properties are relative to brower window */
+   
+    bottom:50px;
+     right:10px; 
+    
+} 
+/* z-index is control which box is over and which box is under while overlapping */
+ 
+/* .m1{
+    height:100px;
+    width: 100px;
+    text-align:center;
+    font-style:italic;
+    border:2px double black;
+    background-color:magenta;
+     display:inline-block; 
+
+}  */
+/* Unsplash ic website is used to take images for background -> cover(most used) , auto , contain*/
+#m1{
+    background-image:url("jei-lee-yRXuXvy4sQ4-unsplash.jpg");
+    background-size:cover;/* no empty space*/
+}
+body{
+    background-image:url("jei-lee-yRXuXvy4sQ4-unsplash.jpg");
+    background-size:cover;/* no empty space*/
+}
+/* Flexbox - Very important 
+It is used to place boxes in row or column direction. There are two axis one is main axis and
+ other one is cross axis.There are various properties of flex are:
+1. Flexbox Direction : row(by default) , row-reverse , column , column-reverse .
+2. justify-content (align along the main axis): flex-start , flex-end , center , space-evenly
+3. align-item: alignment along cross axis
+4. align-content: align of space btw & around the content along cross axis
+5. align-self: alignment of individual along cross axis
+6. flex-grow:[It changes the size of particular box according to the size of container] Item will grow relative to the rest of the items if space is available.
+7. flex-shrink: Item will shrink relative to the rest of the items if space is available.
+/* align-self has higher priority than align-item */
+ */
+.cont{
+     height:600px;
+     width:500px;
+     margin:5px;
+     padding:10px;
+     background-color:white;
+     border:2px solid black;
+    display:flex;
+    flex-direction:row;/* left to right*/
+    /* flex-direction:row-reverse;/*right to left
+    flex-direction:column;/* up to down
+    flex-direction:column-reverse;down to up */
+    justify-content: flex-start; /*No change*/
+    /* justify-content:flex-end;
+    justify-content:center;
+    justify-content:space-evenly; */
+   /*flex-wrap:wrap;  from bottom */
+   /*align-items:center;  vertice center*/
+   /* align-content:flex-start; */
+    
+    /* gap:10px; */
+ }
+#y1{
+    text-align:center;
+    background-color:magenta;
+    height:100px;
+    width:200px;
+    border:2px solid black;
+     /* display:flex; */
+    flex-shrink: 2;
+     
+}
+#y2{
+    text-align:center;
+    background-color:maroon;
+    height:100px;
+    width:200px;
+     white-space: pre-line;
+    flex-wrap: wrap;
+    border:2px solid black;
+    flex-shrink: 0.5;
+}
+#y3{
+    text-align:center;
+    background-color:mediumspringgreen;
+    height:100px;
+    width:200px;
+    /* align-self:flex-end; */
+    border:2px solid black;
+}
+#y4{
+    text-align:center;
+    background-color:mediumpurple;
+    height:100px;
+    width:200px;
+    border:2px solid black;
+    /* align-self:flex-end; */
+    ;
+}
+.list{
+    /* height:200px;
+    width:1000px; */
+    border:3px solid black ;
+    display:flex;
+    justify-content:space-evenly;
+    background-color:white;
+}
+
+li{
+    list-style-type:none;
+}
+#out{
+    height:200px;
+    width:1000px; 
+    background-color:pink;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    
+    
+}
+#in{
+    height:100px;
+    width:100px;
+    background-color:antiquewhite;
+    
+}
+
+/* Media Queries mainly for width -> this is used to make changes according to px of page */
+@media (width : 600px){
+    b{
+    background-color: red;
+    width:100px;
+    height:100px;
+    }
+    
+}
+/* @media(min-width: 600px)/* Above 600px get change
+{
+    b{
+        background-color:green;
+    }
+}
+@media(max-width:700px) /* Below 700px get change
+{
+    b{
+        color:red;
+    }
+} */
+@media(min-width :200px)and(max-width:300px) /* 200px to 300px get change*/
+{
+    b{
+        background-color:aquamarine;
+    }
+}
+#q{
+    position: relative;
+    top: 200px;
+    left : 200px;
+    height:100px;
+    width:200px;
+    background-color:midnightblue;
+    border: 5px solid black;
+}
+@media (max-width:300px) {
+    #q{
+        color:green;
+    }
+}
+@media (min-width:300px) and (max-width:400px){
+    #q{
+        color:pink;
+    }
+}
+@media (min-width:400px) and (max-width:600px){
+    #q{
+        color:red;
+    }
+}
+@media(min-width:600px){
+    #q{
+        color:blue;
+    }
+}
+/* Transition : btw two states 
+transition-property , transition-duration*/
+#q{
+    transition-property:all;
+    transition-duration: 2s;
+    transition-timing-function: steps(2);
+    transition-timing-function: ease-in;
+    transition-delay: 1s;
+    transition : all 2s ease-in 1s; /* All property define at one time*/
+}
+
+#q:hover /*hover means it is a change when "cursor" move on that div*/
+{   font-size:large;
+    background-color:mediumblue;
+    color:white;
+}
+#q:active /*When Click then change occur*/
+{
+    background-color:#00ffff;
+}
+/* Transform -> 2D&3D Change size, rotate , scale , translate , skew */
+#q{
+     transform:rotate(360deg); 
+    /* rotate: x 90deg; */
+    transform: scale(2);/* size increase by 2 times*/
+    transform:scale(1,1);
+    transform: translateX(100px);
+    transform: translateX(-100px);
+    transform: translateY(100px);
+    transform: translateY(-100px);
+    transform: translate(100px,60px);/* both direction*/
+    /*transform: skew(20deg); it strech the element in both direction*/
+}
+/* ANIMATION -> First we make template*/
+#q1{
+    border-radius:50%;
+    height:100px;
+    width:100px;
+    position:relative;
+    left:100px;
+    background-color: teal;
+    /* transform:rotate(180deg); */
+}
+/* Animation template is given below */
+@keyframes colorAnimate{
+    from{
+        background-color:teal;
+        left:100px;}
+    to {
+        background-color: magenta;
+        font-size:large;
+        left:500px; 
+    }
+}
+/* Then apply Animation properties */
+#q1{
+    animation-name: colorAnimate;
+    animation-duration:3s;
+    /* animation-timing-function: ease-in;If I remove then it show a blinking effect on my page */
+    animation-delay:1s;
+    animation-iteration-count:10;/*If I want to do animation all time on my page then write "infinite" at this place*/
+    animation-direction: normal;
+    /* animation-direction: reverse; */
+    /* animation-direction: alternate; back and for work like pendulum*/
+    animation-direction: alternate-reverse;
+    /* animation: colorAnimate 3s 1s ease-in 0s  10 reverse; use it*/
+}
+#q3{
+    height:100px;
+    width:100px;
+    border:3px solid black;
+    border-top:3px solid red;
+    /* border-bottom:1px solid black;
+    border-right:1px solid black;
+    border-left:1px solid black; */
+    border-radius:50%;
+    
+
+}
+@keyframes AnimateLoader {
+    from{
+       
+        /* border-top:3px solid red;
+        border:3px solid black; */
+        transform : rotate(0deg);
+    }
+    to{
+        /* border: 3px solid rgba(0, 0, 0, 0.897); */
+        transform : rotate(360deg);
+    }
+}
+#q3{
+    animation-name: AnimateLoader;
+    animation-duration :5s;
+    animation-timing-function : ease-in;
+    animation-delay:1s;
+    animation-iteration-count:infinite;
+}
+/* font-awesome is a website to make icons in html or css for making websites */
+*{
+    margin:0;
+    padding:0;
+    
+}
+/* Grid */
+.grid-container{
+    display:grid;
+    grid-template-columns :repeat(5,100px);
+    grid-template-rows: 200px 150px;
+    /* grid-auto-rows: 100px; */
+    grid-row-gap:10px;
+    grid-column-gap:10px;
+    justify-items: start;
+    height:100px;
+    width:100px;
+    /* border:2px solid black; */
+    box-sizing: border-box;
+    font-size: 30px;
+}
+.grid-item{
+    background-color:aquamarine;
+    color:blue;
+    border:2px solid black;
+}

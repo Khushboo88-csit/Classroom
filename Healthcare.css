@@ -1,0 +1,222 @@
+*{
+    font-family:Arial, Helvetica, sans-serif;
+    margin:auto;
+    padding:auto;
+}
+#head{
+    height:50px;
+    width:100%;
+    Background-color:teal;
+    font:medium;
+    display:flex;
+    
+}
+#logo{
+    height:100px;
+    width:100px;
+    background-image:url(Untitled.jpg);
+    background-size:cover;
+    position:absolute;
+    left:1px;
+}
+#logo1{
+    color:black;
+    font:medium;
+
+}
+logo2{
+    position:absolute;
+    left:10px;
+    display:flex;
+}
+logo3{
+    position:absolute;
+    left:500px;
+    /* left:100px; */
+    height:50%;
+    width:40%;
+}
+select{
+    height:50px;
+    width:50px;
+}
+#nav4{
+    position:absolute;
+    right:100px;
+    top:10px;
+    bottom:10px;
+}
+#cart{
+    position:absolute;
+    right:10px;
+    top:10px;
+}
+#nav3{
+    position:absolute;
+    right:300px;
+}
+#nav7{
+    position:relative;
+    top:1px;
+}
+#c{
+    position:relative;
+    top:1px;
+}
+#sign{
+    text-decoration:none;
+    color:black;
+}
+#options{
+    position:absolute;
+    left:500px;
+    text-decoration:bold;
+    font-size: 22px;
+    color:black;
+    display: flex;
+
+}
+#opt1:hover{
+    color:teal;
+}
+#opt2:hover{
+    color:teal;
+}
+#opt3:hover{
+    color:teal;
+}
+#opt4:hover{
+    color:teal;
+}
+
+#opt1{
+    text-decoration:none;
+    color:black;
+}
+#opt3{
+    text-decoration:none;
+    color:black;
+}
+#opt2{
+    text-decoration:none;
+    color:black;
+}
+#opt4{
+    text-decoration:none;
+    color:black;
+}
+#s1{
+    width:80px;
+}
+#med1{
+    width: 100px;
+    height:100px;
+    border:2px solid black;
+}
+#u{
+    width:100%;
+    height:200px;
+    background-color:#89ecda;
+    font-size:50px;
+    font-style:bold;
+    display: flex;
+}
+#i1{
+    position:relative;
+    left:300px;
+    
+}
+#image{
+    width:300px;
+    height:300px;
+    display:flex;
+    justify-content: center;
+    background-color:whitesmoke;
+    font-size:medium;
+    font-style:"Georgia", serif;
+    
+    gap:15px;
+}
+#image2{
+    width:300px;
+    height:300px;
+    display:flex;
+    justify-content: center;
+    background-color:whitesmoke;
+    font-size:medium;
+    font-style:"Georgia", serif;
+   
+    gap:10px;
+}
+#image3{
+    width:300px;
+    height:300px;
+    display:flex;
+    justify-content: center;
+    background-color:whitesmoke;
+    font-size:medium;
+    font-style:"Georgia", serif;
+    
+    gap:20px;
+}
+#i2{
+    border:2px solid black;
+    text-align: center;
+}
+#i3{
+    border:2px solid black;
+    text-align: center;
+}
+#i4{
+    border:2px solid black;
+    text-align: center;
+}
+#i5{
+    border:2px solid black;
+    text-align: center;
+}
+#i6{
+    border:2px solid black;
+    text-align: center;
+}
+
+#i7{
+    border:2px solid black;
+    text-align: center;
+}
+#i8{
+    border:2px solid black;
+    text-align: center;
+}
+#i9{
+    border:2px solid black;
+    text-align: center;
+}
+#i10{
+    border:2px solid black;
+    text-align: center;
+}
+#i11{
+    border:2px solid black;
+    text-align: center;
+}
+#i12{
+    border:2px solid black;
+    text-align: center;
+}
+#i13{
+    border:2px solid black;
+    text-align: center;
+}
+#i14{
+    border:2px solid black;
+    text-align: center;
+}
+#i15{
+    border:2px solid black;
+    text-align: center;
+}
+#i16{
+    border:2px solid black;
+    text-align: center;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <p id="demo"></p>
+</head>
+<body>
+   <h1>Hii I am learning JavaScript </h1>
+</body>
+<style>
+    
+    form{
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            background-color:rgb(63, 179, 179);
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+</style>
+<script src="First.js"></script>
+<h2>Registration Form</h2>
+<form action="message.html" name="MyForm" onsubmit="return (Validate1());">
+    <input name = Email placeholder="Email" type ="text"><br>
+    <input name = password placeholder="password" type ="password"><br>
+    <button onclick="Validate2()"type="Submit">Submit</button>
+</form>
+
+
+</html>

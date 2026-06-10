@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            background-color:rgb(63, 179, 179);
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        } 
+    </style>
+    <script type="text/javascript">
+        //FORM VALIDATION
+    function Validate(){
+        if(document.MyForm.Email.value ==""){
+            alert("Please provide your Email ID");
+            document.MyForm.Email.focus()
+            return false;
+        }else if(document.MyForm.MobileNumber.value ==""){
+            alert("Please provide your Mobile Number");
+            document.MyForm.MobileNumber.focus()
+            return false;
+        }
+        else if(document.MyForm.password.value ==""){
+            alert("Please provide your password");
+            document.MyForm.password.focus()
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    </script>
+</head>
+<body>
+    
+    <div class="container">
+    <h2>Login/Sign Up</h2>
+    <form action="message.html" name="MyForm" onsubmit="return (Validate())">
+        <input name = "Email" placeholder="Enter Email ID" required type="text">
+        <input type="tel" name="MobileNumber" placeholder="Enter Mobile Number" pattern="[0-9]{10}" required>
+        <input name = "password" placeholder="Enter Password" required type="password">
+        <button type="submit">Sign Up</button>
+    </form>
+</div>
+   
+</body>
+</html>

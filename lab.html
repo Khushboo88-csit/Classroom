@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Health Lab Test Booking</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f4f8fb;
+    color:#333;
+}
+
+header{
+    background:#0f9d8a;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+header h1{
+    font-size:36px;
+}
+
+.hero{
+    padding:40px 20px;
+    text-align:center;
+    background:white;
+}
+
+.hero h2{
+    color:#0f9d8a;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:900px;
+    margin:auto;
+    line-height:1.7;
+    font-size:17px;
+}
+
+.container{
+    width:90%;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    color:#0f9d8a;
+    margin-bottom:10px;
+}
+
+.card p{
+    margin-bottom:10px;
+    line-height:1.5;
+}
+
+.price{
+    font-size:22px;
+    font-weight:bold;
+    color:#222;
+}
+
+.old-price{
+    text-decoration:line-through;
+    color:gray;
+    margin-left:8px;
+    font-size:16px;
+}
+
+.discount{
+    color:green;
+    font-weight:bold;
+    margin-left:10px;
+}
+
+.report{
+    margin:10px 0;
+    color:#555;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#0f9d8a;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#087a6b;
+}
+
+footer{
+    background:#0f9d8a;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Health Lab Test Booking</h1>
+    <p>Book Your Lab & Blood Tests Online</p>
+</header>
+
+<section class="hero">
+    <h2>Book Your Lab and Blood Tests Online</h2>
+    <p>
+        Booking an online test is easier than ever before thanks to QuickClinic’s 
+        user-friendly website and app. Get convenient home sample collection for 
+        lab tests, reliable test reports, discounts, quick report delivery and more. 
+        We are dedicated to your service.
+    </p>
+</section>
+
+<section class="container">
+
+    <!-- ESR -->
+    <div class="card">
+        <h3>Erythrocyte Sedimentation Rate (ESR) Test</h3>
+        <p>Also known as Sed rate, Westergren sedimentation rate.</p>
+        <p>🩸 Fasting Not Required</p>
+        <p class="report">📄 Reports in 12 Hrs</p>
+
+        <p class="price">
+            ₹199
+            <span class="old-price">₹349</span>
+            <span class="discount">43% OFF</span>
+        </p>
+
+        <button onclick="bookTest('ESR Test')">Book</button>
+    </div>
+
+    <!-- Vitamin B -->
+    <div class="card">
+        <h3>Vitamin B Complex Profile</h3>
+        <p>Includes 8 tests</p>
+        <p>🩸 Fasting Not Required</p>
+        <p class="report">📄 Reports in 22 Hrs</p>
+
+        <p class="price">
+            ₹1049
+            <span class="old-price">₹2199</span>
+            <span class="discount">52% OFF</span>
+        </p>
+
+        <button onclick="bookTest('Vitamin B Complex Profile')">Book</button>
+    </div>
+
+    <!-- Potassium -->
+    <div class="card">
+        <h3>Potassium (K+) Test</h3>
+        <p>Also known as Serum Potassium Test.</p>
+        <p>🩸 Fasting Not Required</p>
+        <p class="report">📄 Reports in 12 Hrs</p>
+
+        <p class="price">
+            ₹239
+            <span class="old-price">₹249</span>
+            <span class="discount">4% OFF</span>
+        </p>
+
+        <button onclick="bookTest('Potassium Test')">Book</button>
+    </div>
+
+    <!-- LFT -->
+    <div class="card">
+        <h3>Liver Function Test (LFT)</h3>
+        <p>Includes 12 tests. Also known as Liver Profile.</p>
+        <p>🩸 Fasting Not Required</p>
+        <p class="report">📄 Reports in 11 Hrs</p>
+
+        <p class="price">
+            ₹449
+            <span class="old-price">₹1099</span>
+            <span class="discount">59% OFF</span>
+        </p>
+
+        <button onclick="bookTest('Liver Function Test')">Book</button>
+    </div>
+
+    <!-- Dengue -->
+    <div class="card">
+        <h3>Dengue Test - IgG (Elisa)</h3>
+        <p>Also known as Dengue Virus IgG Antibody Test.</p>
+        <p>🩸 Fasting Not Required</p>
+        <p class="report">📄 Reports in 13 Hrs</p>
+
+        <p class="price">
+            ₹549
+            <span class="old-price">₹649</span>
+            <span class="discount">15% OFF</span>
+        </p>
+
+        <button onclick="bookTest('Dengue Test')">Book</button>
+    </div>
+
+    <!-- CBC -->
+    <div class="card">
+        <h3>CBC Test</h3>
+        <p>Includes 24 tests. Full Blood Count.</p>
+        <p>🩸 Fasting Not Required</p>
+        <p class="report">📄 Reports in 10 Hrs</p>
+
+        <p class="price">
+            ₹299
+            <span class="old-price">₹799</span>
+            <span class="discount">63% OFF</span>
+        </p>
+
+        <button onclick="bookTest('CBC Test')">Book</button>
+    </div>
+
+    <!-- Homocysteine -->
+    <div class="card">
+        <h3>Homocysteine Test</h3>
+        <p>Also known as Total Homocysteine Test.</p>
+        <p>🩸 Fasting Not Required</p>
+        <p class="report">📄 Reports in 14 Hrs</p>
+
+        <p class="price">
+            ₹699
+            <span class="old-price">₹949</span>
+            <span class="discount">26% OFF</span>
+        </p>
+
+        <button onclick="bookTest('Homocysteine Test')">Book</button>
+    </div>
+
+    <!-- Thyroid -->
+    <div class="card">
+        <h3>Thyroid Profile Test (T3, T4, UTSH)</h3>
+        <p>Includes 3 tests. Thyroid Function Test.</p>
+        <p>🩸 Fasting Not Required</p>
+        <p class="report">📄 Reports in 10 Hrs</p>
+
+        <p class="price">
+            ₹349
+            <span class="old-price">₹699</span>
+            <span class="discount">50% OFF</span>
+        </p>
+
+        <button onclick="bookTest('Thyroid Profile Test')">Book</button>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Health Lab Booking |QuickClinic.com </p>
+</footer>
+
+<script>
+function bookTest(testName){
+    alert("Your booking for " + testName + " has been confirmed!");
+}
+</script>
+
+</body>
+</html>
